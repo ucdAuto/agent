@@ -1,0 +1,7 @@
+echo locked/agent.name=icp-mcs-00
+locked/agent.jms.remote.host=67.228.157.106
+locked/agent.jms.remote.port=7918
+locked/agent.mutual_auth=false
+verify.server.identity=false
+server.url=https://67.228.157.106:8443
+repository.type=CODESTATION
