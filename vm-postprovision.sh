@@ -9,11 +9,11 @@ echo "verify.server.identity=false" >> agent.props
 echo "server.url="https://67.228.157.106:8443"" >> agent.props
 echo "repository.type=CODESTATION" >> agent.props
 echo "JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre" >> agent.props
-echo "ps -auxw | grep agent | grep -v grep > /dev/null" >> auto.sh
-echo " if [ $? != 0 ]" >> auto.sh
-echo "    then" >> auto.sh
-echo "     /opt/ibm-ucd/agent/bin/agent start" >> auto.sh
-echo "fi" >> auto.sh
-chmod +x auto.sh
+echo "ps -auxw | grep agent | grep -v grep > /dev/null" >> /opt/ibm-ucd/agent/auto.sh
+echo " if [ $? != 0 ]" >> /opt/ibm-ucd/agent/auto.sh
+echo "    then" >> /opt/ibm-ucd/agent/auto.sh
+echo "     /opt/ibm-ucd/agent/bin/agent start" >> /opt/ibm-ucd/agent/auto.sh
+echo "fi" >> /opt/ibm-ucd/agent/auto.sh
+chmod +x /opt/ibm-ucd/agent/auto.sh
 printf "* * * * * /opt/ibm-ucd/agent/auto.sh" >> /etc/crontab
 ./install-agent-from-file.sh agent.props && /opt/ibm-ucd/agent/bin/agent start
