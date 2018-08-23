@@ -1,3 +1,8 @@
+#!/bin/bash
+#Set logging
+exec 3>&1 4>&2
+trap 'exec 2>&4 1>&3' 0 1 2 3
+exec 1>/root/agent.out 2>&1
 apt-get update && apt install -y openjdk-8-jdk unzip
 wget https://67.228.157.106:8443/tools/ibm-ucd-agent.zip --no-check-certificate
 unzip ibm-ucd-agent.zip && cd ibm-ucd-agent-install
