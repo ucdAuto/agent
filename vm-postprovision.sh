@@ -13,7 +13,7 @@ echo "verify.server.identity=false" >> agent.props
 echo "server.url="https://67.228.157.106:8443"" >> agent.props
 echo "repository.type=CODESTATION" >> agent.props
 echo "JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre" >> agent.props
-echo "locked/agent.name="icp-mcs-00911"" >> agent.props
+echo "locked/agent.name="@@agent.name@@911"" >> agent.props
 mkdir -p /opt/ibm-ucd/agent
 echo "JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre" >> /opt/ibm-ucd/agent/auto.sh
 echo "PATH=$PATH:$JAVA_HOME/bin:" >> /opt/ibm-ucd/agent/auto.sh
